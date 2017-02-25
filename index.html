@@ -1,0 +1,121 @@
+!<doctype html>
+<html>
+<head>
+	<title>This is the title</title>
+	<meta charset="UTF-8">
+	<style>
+		h1 {
+		font-size: 60px;
+		}
+		html {
+				text-shadow: 1px 2px black;
+		}
+		a {
+			color: skyblue;
+			text-decoration:none;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+			padding-right: 0px;
+			padding-left: 0px;
+			font-size: 10pt;
+			padding-bottom: 0px;
+			margin: 0px;
+			width: 100%;
+			padding-top: 0px;
+			font-family: Lucida Console, Courier, Monotype;
+			text-align: center;
+			color: #FFFFFF;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-attachment: fixed;
+			background-size: cover;
+		}
+		#nothing {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		/* unvisited link */
+		a:link {
+			effect: none;
+		}
+		/* visited link */
+		a:visited {
+			effect: none;
+		}
+		/* mouse over link */
+		a:hover {
+			effect: none;
+		}
+		/* selected link */
+		a:active {
+			effect: none;
+		}
+		video {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			min-width: 135%;
+			min-height: 110%;
+			width: auto;
+			height: auto;
+			z-index: -100;
+			transform: translateX(-50%) translateY(-50%);
+			background-size: cover;
+			overflow: hidden;
+			filter:blur(1px);
+		}
+	</style>
+	<script language="JavaScript">
+		msg = new Array();
+		msg[0] = "<br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+		msg[1] = "<h1>Nilsson</h1>";
+		msg[2] = "<h2>x3pht owner</h2>";
+		msg[3] = "<h2><a href='Länk till första uppgiften'>First Task Completed</a></h3>";
+		msg[4] = "<h2>X3PHT will hit the market in 2018</h2>";
+		msg[5] = "<br><br>";
+		msg[6] = "<h3>The cheat will stay private</h3>"
+		text1 = "";
+		text2 = "";
+		count = 0;
+		count2 = 0;
+ 
+		text = msg[0].split("");
+		function writetext() {
+			text1 = text2 + text[count];
+			text2 += text[count];
+			document.all["nothing"].innerHTML = text1;
+			if (count < text.length - 1) {
+				count++;
+				setTimeout('writetext()', 15);
+			} else {
+				count = 0;
+				if (count2 != 10) {
+					count2++;
+					text = eval('msg[' + count2 + '].split("")');
+					setTimeout('writetext()', 25);
+				}
+			}
+		}
+	</script>
+</head>
+<body onLoad="writetext()">
+	<video autoplay="" loop="" id="player">
+		<source src="hash.mp4" type="video/mp4">
+	</video autoplay="">
+    <audio autoplay="" loop="" id="audio">
+        <source src="content/song.mp3" type="audio/mp3">
+        <script>
+            var vid = document.getElementById("audio");
+            vid.volume = 0.4;
+        </script>
+    </audio>
+	<div class="main">
+		<div id="nothing" style="font-family: 'Courier'";
+">
+			INJECTING
+		</div>
+	</div>
+</body>
+</html>
